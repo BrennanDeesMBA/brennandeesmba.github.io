@@ -44,11 +44,30 @@
     }
 
     header {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       margin-bottom: 32px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-image: url("TAMU-Banner.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(247, 247, 244, 0.82);
+      pointer-events: none;
+    }
+
+    header > .hero {
+      position: relative;
+      z-index: 1;
     }
 
     .hero {
@@ -82,7 +101,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 50% 20%; /* center horizontally, show more of the top */
+      object-position: 50% 20%; /* show more of the top of the headshot */
     }
 
     h1 {
@@ -212,7 +231,7 @@
       <div class="hero">
         <div class="hero-top">
           <div class="avatar-wrapper">
-            <!-- Make sure IMG_4768.jpg is uploaded to the repo root -->
+            <!-- Make sure IMG_4768.JPG is in the repo root -->
             <img src="IMG_4768.JPG" alt="Headshot of Brennan Dees" />
           </div>
           <div>
@@ -305,6 +324,33 @@
             <li>Project planning, coordination with design and construction teams</li>
             <li>Communication of complex financial concepts to non-financial audiences</li>
           </ul>
+        </section>
+
+        <section id="project-images">
+          <h2>Project Highlights</h2>
+          <p class="item-sub">Select projects I’ve contributed to</p>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+            <figure style="margin:0;">
+              <img src="Ritz-Carlton-Woodlands-Howard-Hughes.jpg" alt="Ritz-Carlton Residences, The Woodlands – Howard Hughes" style="width:100%; border-radius:10px; border:1px solid #e2e8f0; box-shadow:0 6px 16px rgba(0,0,0,0.06);" />
+              <figcaption style="font-size:0.8rem; color:#6b7280; margin-top:4px;">
+                Ritz-Carlton Residences, The Woodlands – Howard Hughes
+              </figcaption>
+            </figure>
+
+            <figure style="margin:0;">
+              <img src="One-Bridgland-Green-Howard-Hughes.jpg" alt="One Bridgeland Green – Howard Hughes" style="width:100%; border-radius:10px; border:1px solid #e2e8f0; box-shadow:0 6px 16px rgba(0,0,0,0.06);" />
+              <figcaption style="font-size:0.8rem; color:#6b7280; margin-top:4px;">
+                One Bridgeland Green – Mass timber office – Howard Hughes
+              </figcaption>
+            </figure>
+
+            <figure style="margin:0;">
+              <img src="ATX-Tower-Ryan-Companies.jpg" alt="High-rise tower in Austin – Ryan Companies" style="width:100%; border-radius:10px; border:1px solid #e2e8f0; box-shadow:0 6px 16px rgba(0,0,0,0.06);" />
+              <figcaption style="font-size:0.8rem; color:#6b7280; margin-top:4px;">
+                High-rise tower in Austin – Ryan Companies
+              </figcaption>
+            </figure>
+          </div>
         </section>
 
         <section id="leadership">
