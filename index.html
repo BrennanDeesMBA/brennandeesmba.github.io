@@ -274,6 +274,7 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
+    /* Default project images (Ritz, Bridgeland, Woodlands, TAMU) */
     .project-card img {
       width: 100%;
       display: block;
@@ -282,10 +283,13 @@
       object-position: 50% 10%;
     }
 
-    /* Fine-tune ATX tower framing */
+    /* ATX Tower: show full image down to street */
     .project-card img[alt^="ATX Tower"] {
-      max-height: 260px;
-      object-position: 50% 0%;
+      max-height: none;       /* no cropping */
+      height: auto;
+      object-fit: contain;    /* entire image visible */
+      object-position: center;
+      background: #ffffff;    /* avoids any blank color issues */
     }
 
     .project-card-body {
